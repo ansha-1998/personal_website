@@ -176,18 +176,10 @@
   }
 
   // ── Contact form → Google Forms ───────────────────────────────────────────
-  //
-  //  HOW TO CONNECT YOUR GOOGLE FORM:
-  //  1. Create a Google Form with fields: Name, Email, Phone, Message
-  //  2. Click ⋮ → "Get pre-filled link" to reveal entry IDs
-  //  3. Replace the GOOGLE_FORM_URL and ENTRY_* constants below
-  //  4. The form submits silently (no-cors) — data goes straight to your sheet
-  https://docs.google.com/forms/d/e/1FAIpQLSdGXKu34QCB_9hPeIDNRg5v9KWzegrGeoYRHXDXhPQ5dJdKQw/viewform?usp=pp_url&entry.1430851278=Ansha&entry.1643065738=anshamohammed14@gmail.com&entry.1722332998=9947363114&entry.2031443530=Hi
-
-
-  //
-  var GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdGXKu34QCB_9hPeIDNRg5v9KWzegrGeoYRHXDXhPQ5dJdKQw/viewform?usp=publish-editor';
-  var ENTRY_NAME = 'entry.1430851278';  // ← replace with your entry ID
+  // Submits silently via no-cors fetch → data appears in your Google Sheet.
+  // URL must end with /formResponse (not /viewform).
+  var GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdGXKu34QCB_9hPeIDNRg5v9KWzegrGeoYRHXDXhPQ5dJdKQw/formResponse';
+  var ENTRY_NAME = 'entry.1430851278';
   var ENTRY_EMAIL = 'entry.1643065738';
   var ENTRY_PHONE = 'entry.1722332998';
   var ENTRY_MESSAGE = 'entry.2031443530';

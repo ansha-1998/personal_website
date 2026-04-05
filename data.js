@@ -11,9 +11,9 @@ window.SITE_DATA = {
       "From async trading pipelines to multi-agent AI orchestration, I ship things end-to-end. Clean architecture, smart APIs, and products people actually use.",
     ],
     location: "India",
-    email: "anshamohammed14@email.com",
-    phone: "+91 00000 00000",    // ← replace with your number
-    whatsapp: "910000000000",    // ← country code + number, no + or spaces
+    email: "anshamohammed14@gmail.com",
+    phone: "+91 9947363114",    // ← replace with your number
+    whatsapp: "9947363114",    // ← country code + number, no + or spaces
     socials: {
       github: "https://github.com/anshamohammed",
       linkedin: "https://www.linkedin.com/in/mohammed-ansha-5aa2131a4",

@@ -15,7 +15,7 @@ window.SITE_DATA = {
     phone: "+91 9947363114",    // ← replace with your number
     whatsapp: "9947363114",    // ← country code + number, no + or spaces
     socials: {
-      github: "https://github.com/anshamohammed",
+      github: "https://github.com/ansha-1998",
       linkedin: "https://www.linkedin.com/in/mohammed-ansha-5aa2131a4",
       instagram: null,
     },

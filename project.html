@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Project — Mohammed Ansha</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/project-page.css" />
+
+  <!-- Apply saved theme before paint -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ═══════════ PAGE LOADER ═══════════ -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-content">
+      <svg class="loader-bot" viewBox="0 0 56 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="28" cy="3" r="3" fill="var(--accent)">
+          <animate attributeName="opacity" values="1;0.4;1" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <line x1="28" y1="5.8" x2="28" y2="12" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+        <rect x="10" y="12" width="36" height="27" rx="9" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1.5"/>
+        <circle cx="21" cy="25.5" r="5" fill="var(--accent)" fill-opacity="0.9"/>
+        <circle cx="22.5" cy="23.8" r="1.6" fill="var(--bg-primary)" fill-opacity="0.85"/>
+        <circle cx="35" cy="25.5" r="5" fill="var(--accent)" fill-opacity="0.9"/>
+        <circle cx="36.5" cy="23.8" r="1.6" fill="var(--bg-primary)" fill-opacity="0.85"/>
+        <rect x="21" y="33" width="14" height="3" rx="1.5" fill="var(--accent)" fill-opacity="0.4"/>
+        <rect x="23" y="33" width="2.5" height="3" rx="1" fill="var(--accent)" fill-opacity="0.5"/>
+        <rect x="27" y="33" width="2.5" height="3" rx="1" fill="var(--accent)" fill-opacity="0.5"/>
+        <rect x="31" y="33" width="2.5" height="3" rx="1" fill="var(--accent)" fill-opacity="0.5"/>
+        <rect x="24" y="39" width="8" height="5" rx="2.5" fill="var(--accent)" fill-opacity="0.28"/>
+        <rect x="8"  y="44" width="40" height="22" rx="9" fill="var(--accent)" fill-opacity="0.10" stroke="var(--accent)" stroke-width="1.5"/>
+        <circle cx="28" cy="55" r="5.5" fill="var(--accent)" fill-opacity="0.2"/>
+        <circle cx="28" cy="55" r="3"   fill="var(--accent)" fill-opacity="0.9">
+          <animate attributeName="r" values="3;4;3" dur="1.4s" repeatCount="indefinite"/>
+          <animate attributeName="fill-opacity" values="0.9;0.5;0.9" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <rect x="13" y="66" width="12" height="8" rx="4" fill="var(--accent)" fill-opacity="0.14" stroke="var(--accent)" stroke-width="1.5"/>
+        <rect x="31" y="66" width="12" height="8" rx="4" fill="var(--accent)" fill-opacity="0.14" stroke="var(--accent)" stroke-width="1.5"/>
+      </svg>
+      <span class="loader-label">MA</span>
+    </div>
+  </div>
+
+  <!-- Cursor -->
+  <div class="cursor-dot"  id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Noise -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo-text">MA</span>
+        <span class="nav-logo-dot"></span>
+      </a>
+      <div class="nav-back">
+        <a href="index.html#projects" class="nav-back-link" id="nav-back">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+          <span>All Projects</span>
+        </a>
+      </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" title="Toggle theme">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/>
+          </svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1"  x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1"  y1="12" x2="3"  y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════ PROJECT HERO ═══════════ -->
+  <section class="proj-hero">
+    <div class="proj-hero-orb proj-hero-orb-1" aria-hidden="true"></div>
+    <div class="proj-hero-orb proj-hero-orb-2" aria-hidden="true"></div>
+    <div class="container">
+      <div class="proj-hero-inner">
+        <div class="proj-meta-row" id="proj-meta-row">
+          <span class="proj-year"     id="proj-year"></span>
+          <span class="proj-badge"    id="proj-badge" style="display:none">Featured</span>
+        </div>
+        <h1 class="proj-title" id="proj-title"></h1>
+        <div class="proj-tags" id="proj-tags"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROJECT BODY ═══════════ -->
+  <section class="proj-body">
+    <div class="container">
+      <div class="proj-layout">
+
+        <!-- Summary -->
+        <div class="proj-summary" id="proj-summary"></div>
+
+        <!-- CTA panel -->
+        <aside class="proj-cta-panel">
+          <div class="proj-cta-card">
+            <p class="proj-cta-label">Explore the project</p>
+            <div class="proj-cta-btns" id="proj-cta-btns">
+              <!-- injected by JS -->
+            </div>
+            <div class="proj-cta-divider"></div>
+            <a href="index.html#projects" class="proj-back-link">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M19 12H5M5 12l7-7M5 12l7 7"/></svg>
+              Back to all projects
+            </a>
+          </div>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name" id="footer-name"></span>
+        <span class="footer-copy">Designed &amp; built with care.</span>
+        <span class="footer-year" id="footer-year"></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="js/project-page.js"></script>
+</body>
+</html>

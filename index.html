@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohammed Ansha — AI Engineer</title>
+  <meta name="description" content="Mohammed Ansha is an AI Engineer specialising in intelligent systems, trading automation, and scalable backend architectures." />
+  <meta name="author" content="Mohammed Ansha" />
+  <meta property="og:title"       content="Mohammed Ansha — AI Engineer" />
+  <meta property="og:description" content="Building intelligent systems that actually work." />
+  <meta property="og:type"        content="website" />
+
+  <!-- Fonts: Cormorant Garamond (display) + DM Mono (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/main.css" />
+</head>
+<body>
+
+  <!-- ═══════════ PAGE LOADER — bot somersault ═══════════ -->
+  <div id="page-loader" class="page-loader" aria-hidden="true">
+    <div class="loader-content">
+      <svg class="loader-bot" viewBox="0 0 56 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Antenna ball -->
+        <circle cx="28" cy="3" r="3" fill="var(--accent)">
+          <animate attributeName="opacity" values="1;0.4;1" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Antenna stem -->
+        <line x1="28" y1="5.8" x2="28" y2="12" stroke="var(--accent)" stroke-width="2" stroke-linecap="round"/>
+        <!-- Head -->
+        <rect x="10" y="12" width="36" height="27" rx="9" fill="var(--accent)" fill-opacity="0.12" stroke="var(--accent)" stroke-width="1.5"/>
+        <!-- Left eye -->
+        <circle cx="21" cy="25.5" r="5" fill="var(--accent)" fill-opacity="0.9"/>
+        <circle cx="22.5" cy="23.8" r="1.6" fill="var(--bg-primary)" fill-opacity="0.85"/>
+        <!-- Right eye -->
+        <circle cx="35" cy="25.5" r="5" fill="var(--accent)" fill-opacity="0.9"/>
+        <circle cx="36.5" cy="23.8" r="1.6" fill="var(--bg-primary)" fill-opacity="0.85"/>
+        <!-- Mouth / grill -->
+        <rect x="21" y="33" width="14" height="3" rx="1.5" fill="var(--accent)" fill-opacity="0.4"/>
+        <rect x="23" y="33" width="2.5" height="3" rx="1" fill="var(--accent)" fill-opacity="0.5"/>
+        <rect x="27" y="33" width="2.5" height="3" rx="1" fill="var(--accent)" fill-opacity="0.5"/>
+        <rect x="31" y="33" width="2.5" height="3" rx="1" fill="var(--accent)" fill-opacity="0.5"/>
+        <!-- Neck -->
+        <rect x="24" y="39" width="8" height="5" rx="2.5" fill="var(--accent)" fill-opacity="0.28"/>
+        <!-- Body -->
+        <rect x="8"  y="44" width="40" height="22" rx="9" fill="var(--accent)" fill-opacity="0.10" stroke="var(--accent)" stroke-width="1.5"/>
+        <!-- Chest core -->
+        <circle cx="28" cy="55" r="5.5" fill="var(--accent)" fill-opacity="0.2"/>
+        <circle cx="28" cy="55" r="3"   fill="var(--accent)" fill-opacity="0.9">
+          <animate attributeName="r" values="3;4;3" dur="1.4s" repeatCount="indefinite"/>
+          <animate attributeName="fill-opacity" values="0.9;0.5;0.9" dur="1.4s" repeatCount="indefinite"/>
+        </circle>
+        <!-- Left leg -->
+        <rect x="13" y="66" width="12" height="8" rx="4" fill="var(--accent)" fill-opacity="0.14" stroke="var(--accent)" stroke-width="1.5"/>
+        <!-- Right leg -->
+        <rect x="31" y="66" width="12" height="8" rx="4" fill="var(--accent)" fill-opacity="0.14" stroke="var(--accent)" stroke-width="1.5"/>
+      </svg>
+      <span class="loader-label">MA</span>
+    </div>
+  </div>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot"  id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- Noise -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- ═══════════ NAV ═══════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" id="nav-logo">
+        <span class="nav-logo-text">MA</span>
+        <span class="nav-logo-dot"></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="#about"      class="nav-link">About</a></li>
+        <li><a href="#projects"   class="nav-link">Projects</a></li>
+        <li><a href="#skills"     class="nav-link">Skills</a></li>
+        <li><a href="#courses"    class="nav-link">Courses</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact"    class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode" title="Toggle theme">
+          <!-- Moon icon (shown in dark mode) -->
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M21 12.79A9 9 0 1111.21 3a7 7 0 009.79 9.79z"/>
+          </svg>
+          <!-- Sun icon (shown in light mode) -->
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="12" r="5"/>
+            <line x1="12" y1="1"  x2="12" y2="3"/>
+            <line x1="12" y1="21" x2="12" y2="23"/>
+            <line x1="4.22" y1="4.22"  x2="5.64" y2="5.64"/>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+            <line x1="1"  y1="12" x2="3"  y2="12"/>
+            <line x1="21" y1="12" x2="23" y2="12"/>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+          </svg>
+        </button>
+        <a href="#contact" class="btn btn-sm btn-accent" id="nav-cta">Let's Connect</a>
+      </div>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <ul class="nav-mobile-links" role="list">
+        <li><a href="#about"      class="nav-mobile-link">About</a></li>
+        <li><a href="#projects"   class="nav-mobile-link">Projects</a></li>
+        <li><a href="#skills"     class="nav-mobile-link">Skills</a></li>
+        <li><a href="#courses"    class="nav-mobile-link">Courses</a></li>
+        <li><a href="#experience" class="nav-mobile-link">Experience</a></li>
+        <li><a href="#contact"    class="nav-mobile-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <section class="hero" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-3" aria-hidden="true"></div>
+
+    <!-- Bot drawing — JS-driven so arrow and line are frame-perfect -->
+    <div class="hero-infinity" aria-hidden="true">
+      <svg class="hero-infinity-svg" viewBox="0 0 200 265" xmlns="http://www.w3.org/2000/svg">
+        <!--
+          Bot outline as connected sub-paths (all share the same d so JS can
+          getTotalLength / getPointAtLength across antenna → head → eyes → body → legs)
+          Sub-paths: antenna ball · stem · head rect · left eye · right eye ·
+                     grill bars · body rect · chest core · left leg · right leg
+        -->
+        <path class="hero-infinity-track" id="inf-track"
+          d="M 109,14 A 9,9 0 1 1 91,14 A 9,9 0 1 1 109,14
+             M 100,23 L 100,42
+             M 51,42 L 149,42 A 13,13 0 0 1 162,55 L 162,99 A 13,13 0 0 1 149,112 L 51,112 A 13,13 0 0 1 38,99 L 38,55 A 13,13 0 0 1 51,42 Z
+             M 85,77 A 11,11 0 1 1 63,77 A 11,11 0 1 1 85,77
+             M 137,77 A 11,11 0 1 1 115,77 A 11,11 0 1 1 137,77
+             M 78,97 L 122,97 M 86,93 L 86,101 M 100,93 L 100,101 M 114,93 L 114,101
+             M 40,122 L 160,122 A 14,14 0 0 1 174,136 L 174,188 A 14,14 0 0 1 160,202 L 40,202 A 14,14 0 0 1 26,188 L 26,136 A 14,14 0 0 1 40,122 Z
+             M 112,162 A 12,12 0 1 1 88,162 A 12,12 0 1 1 112,162
+             M 42,202 L 74,202 A 8,8 0 0 1 82,210 L 82,230 A 8,8 0 0 1 74,238 L 42,238 A 8,8 0 0 1 34,230 L 34,210 A 8,8 0 0 1 42,202 Z
+             M 126,202 L 158,202 A 8,8 0 0 1 166,210 L 166,230 A 8,8 0 0 1 158,238 L 126,238 A 8,8 0 0 1 118,230 L 118,210 A 8,8 0 0 1 126,202 Z"/>
+        <!-- Segments drawn one-by-one by JS, each following the arrow marker -->
+        <path class="hero-infinity-line hero-infinity-seg" d="M 109,14 A 9,9 0 1 1 91,14 A 9,9 0 1 1 109,14"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 100,23 L 100,42"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 51,42 L 149,42 A 13,13 0 0 1 162,55 L 162,99 A 13,13 0 0 1 149,112 L 51,112 A 13,13 0 0 1 38,99 L 38,55 A 13,13 0 0 1 51,42 Z"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 85,77 A 11,11 0 1 1 63,77 A 11,11 0 1 1 85,77"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 137,77 A 11,11 0 1 1 115,77 A 11,11 0 1 1 137,77"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 78,97 L 122,97 M 86,93 L 86,101 M 100,93 L 100,101 M 114,93 L 114,101"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 40,122 L 160,122 A 14,14 0 0 1 174,136 L 174,188 A 14,14 0 0 1 160,202 L 40,202 A 14,14 0 0 1 26,188 L 26,136 A 14,14 0 0 1 40,122 Z"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 112,162 A 12,12 0 1 1 88,162 A 12,12 0 1 1 112,162"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 42,202 L 74,202 A 8,8 0 0 1 82,210 L 82,230 A 8,8 0 0 1 74,238 L 42,238 A 8,8 0 0 1 34,230 L 34,210 A 8,8 0 0 1 42,202 Z"/>
+        <path class="hero-infinity-line hero-infinity-seg" d="M 126,202 L 158,202 A 8,8 0 0 1 166,210 L 166,230 A 8,8 0 0 1 158,238 L 126,238 A 8,8 0 0 1 118,230 L 118,210 A 8,8 0 0 1 126,202 Z"/>
+        <!-- Arrow pointer — JS sets transform and opacity each frame -->
+        <g id="inf-arrow" class="hero-infinity-pointer">
+          <polygon points="-14,-3.5 0,0 -14,3.5"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="hero-content">
+      <h1 class="hero-name" id="hero-name"></h1>
+      <div class="hero-role">
+        <div class="hero-role-line"></div>
+        <span id="hero-role-text"></span>
+        <span class="hero-role-cursor" aria-hidden="true"></span>
+      </div>
+      <p class="hero-tagline" id="hero-tagline"></p>
+      <div class="hero-actions">
+        <a href="#contact"  class="btn btn-primary" id="hero-cta-contact">Let's Connect to Discuss</a>
+        <a href="#projects" class="btn btn-ghost"   id="hero-cta-work">View My Work</a>
+        <a href="#" class="btn btn-ghost btn-resume" id="hero-cta-resume" style="display:none" target="_blank">Resume ↗</a>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-label="Scroll down">
+      <div class="hero-scroll-line"></div>
+      <span class="hero-scroll-label">Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════ ABOUT ═══════════ -->
+  <section class="section about" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">About</span>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">The person behind<br>the commits.</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <div id="about-bio"></div>
+          <div class="about-meta reveal-up" style="--delay:0.3s">
+            <div class="about-meta-item">
+              <span class="about-meta-label">Based in</span>
+              <span id="about-location" class="about-meta-value"></span>
+            </div>
+            <div class="about-meta-item">
+              <span class="about-meta-label">Email</span>
+              <a id="about-email" class="about-meta-value about-meta-link" href=""></a>
+            </div>
+          </div>
+          <div class="about-socials reveal-up" style="--delay:0.4s" id="about-socials"></div>
+        </div>
+        <div class="about-visual reveal-up" style="--delay:0.2s">
+          <div class="about-card">
+            <div class="about-card-inner" id="about-stats"></div>
+            <div class="about-card-glow" aria-hidden="true"></div>
+          </div>
+          <div class="about-rings" aria-hidden="true">
+            <div class="about-ring about-ring-1"></div>
+            <div class="about-ring about-ring-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PROJECTS ═══════════ -->
+  <section class="section projects" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Work</span>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">Things I've<br>shipped.</h2>
+      </div>
+      <div class="projects-grid" id="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ SKILLS ═══════════ -->
+  <section class="section skills-section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Toolkit</span>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">My Stack.</h2>
+      </div>
+      <div id="skills-container" class="skills-categories"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ COURSES ═══════════ -->
+  <section class="section courses-section" id="courses">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Courses</span>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">What I<br>teach.</h2>
+      </div>
+      <div class="course-soon-card reveal-up" style="--delay:0.2s">
+        <div class="course-soon-tag">
+          <span class="course-soon-tag-dot"></span>
+          Coming Soon
+        </div>
+        <h3 class="course-soon-title">AI Engineering Courses</h3>
+        <p class="course-soon-text">In-depth courses on building production AI systems, LLM orchestration, multi-agent frameworks, async backends, and real-world deployments. Built from the trenches of actual AI products.</p>
+        <div class="course-soon-glow" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ EXPERIENCE ═══════════ -->
+  <section class="section experience" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Journey</span>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">Where I've<br>been.</h2>
+      </div>
+      <div class="timeline" id="experience-container"></div>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section class="section contact-section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label reveal-up">Contact</span>
+        <h2 class="section-title reveal-up" style="--delay:0.1s">Let's build<br>something great.</h2>
+        <p class="contact-subtitle reveal-up" style="--delay:0.15s">Whether it's a project, collaboration, or just a conversation — I'm always open to hearing from you.</p>
+      </div>
+
+      <div class="contact-layout">
+
+        <!-- ── Channel cards ── -->
+        <div class="contact-channels reveal-up" style="--delay:0.2s">
+
+          <!-- WhatsApp -->
+          <a class="contact-channel" id="wa-link" href="#" target="_blank" rel="noopener">
+            <div class="channel-icon channel-icon-wa">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="channel-body">
+              <span class="channel-app">WhatsApp</span>
+              <span class="channel-val" id="wa-display"></span>
+            </div>
+            <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+
+          <!-- Phone -->
+          <a class="contact-channel" id="phone-link" href="#">
+            <div class="channel-icon channel-icon-phone">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.7 9.73 19.79 19.79 0 01.67 5.08 2 2 0 012.65 3h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 10.64a16 16 0 006.72 6.72l.95-.95a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            </div>
+            <div class="channel-body">
+              <span class="channel-app">Phone</span>
+              <span class="channel-val" id="phone-display"></span>
+            </div>
+          </a>
+
+          <!-- Email -->
+          <a class="contact-channel" id="email-ch-link" href="#">
+            <div class="channel-icon channel-icon-email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="channel-body">
+              <span class="channel-app">Email</span>
+              <span class="channel-val" id="email-ch-display"></span>
+            </div>
+            <svg class="channel-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>
+          </a>
+
+          <!-- Social links -->
+          <div class="contact-socials" id="contact-socials"></div>
+
+        </div>
+
+        <!-- ── Message form ── -->
+        <div class="contact-form-wrap reveal-up" style="--delay:0.3s">
+          <h3 class="form-title">Send a message</h3>
+
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row-2">
+              <div class="form-group">
+                <label class="form-label" for="cf-name">Name</label>
+                <input class="form-input" id="cf-name" type="text" placeholder="Your name" required autocomplete="name"/>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="cf-email">Email</label>
+                <input class="form-input" id="cf-email" type="email" placeholder="you@email.com" required autocomplete="email"/>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-phone">
+                Phone <span class="form-opt">(optional)</span>
+              </label>
+              <input class="form-input" id="cf-phone" type="tel" placeholder="+91 00000 00000" autocomplete="tel"/>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="cf-msg">Message</label>
+              <textarea class="form-input form-textarea" id="cf-msg" placeholder="What's on your mind?" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit" id="form-submit">
+              <span>Send Message</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+            </button>
+          </form>
+
+          <div class="form-toast" id="form-toast" role="status"></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ FOOTER ═══════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="footer-name" id="footer-name"></span>
+        <span class="footer-copy">Designed &amp; built with care.</span>
+        <span class="footer-year" id="footer-year"></span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Apply saved theme before first paint to avoid flash -->
+  <script>
+    (function(){
+      var t = localStorage.getItem('theme') || 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+  <script src="data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

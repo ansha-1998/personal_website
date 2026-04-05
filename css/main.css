@@ -681,56 +681,23 @@ a.project-card { text-decoration: none; cursor: pointer; }
   margin-top: calc(var(--space-md) * -0.5);
 }
 
-/* Two-column layout: channels | form */
+/* Two-column layout: icons | form */
 .contact-layout {
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: auto 1fr;
   gap: clamp(2.5rem, 5vw, 5rem);
   align-items: start;
 }
 
-/* ── Channel cards ── */
-.contact-channels { display: flex; flex-direction: column; gap: var(--space-sm); }
+/* ── Icon buttons wrapper ── */
+.contact-icons-wrap { padding-top: var(--space-xs); }
+.contact-icons { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 
-.contact-channel {
-  display: flex; align-items: center; gap: var(--space-lg);
-  padding: 1.1rem 1.3rem;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  text-decoration: none;
-  transition: border-color var(--dur-base), background var(--dur-base), transform var(--dur-base) var(--ease-alien);
-  position: relative; overflow: hidden;
-}
-.contact-channel::before {
-  content: ''; position: absolute; inset: 0;
-  background: var(--accent-dim); opacity: 0;
-  transition: opacity var(--dur-base);
-}
-.contact-channel:hover { border-color: var(--accent); transform: translateX(4px); }
-.contact-channel:hover::before { opacity: 1; }
-
-.channel-icon {
-  width: 40px; height: 40px; border-radius: var(--radius-md);
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; border: 1px solid var(--border);
-  transition: border-color var(--dur-base), color var(--dur-base);
-}
-.channel-icon svg { width: 18px; height: 18px; }
-.channel-icon-wa    { color: #25d366; border-color: rgba(37,211,102,.2); background: rgba(37,211,102,.07); }
-.channel-icon-phone { color: var(--accent); }
-.channel-icon-email { color: var(--secondary); }
-.contact-channel:hover .channel-icon { border-color: var(--accent); color: var(--accent); }
-
-.channel-body { flex: 1; min-width: 0; }
-.channel-app  { display: block; font-size: var(--text-xs); letter-spacing: .1em; text-transform: uppercase; color: var(--text-muted); opacity: .7; margin-bottom: .18rem; }
-.channel-val  { display: block; font-size: var(--text-sm); color: var(--text-primary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; transition: color var(--dur-base); }
-.contact-channel:hover .channel-val { color: var(--accent); }
-
-.channel-arrow { width: 16px; height: 16px; color: var(--text-muted); flex-shrink: 0; opacity: .5; transition: opacity var(--dur-base), transform var(--dur-base); }
-.contact-channel:hover .channel-arrow { opacity: 1; transform: translate(2px,-2px); }
-
-.contact-socials { display: flex; gap: var(--space-sm); margin-top: var(--space-sm); }
+/* WhatsApp gets its own green tint */
+.contact-icon-wa { color: #25d366 !important; border-color: rgba(37,211,102,.25) !important; }
+.contact-icon-wa:hover { background: rgba(37,211,102,.12) !important; border-color: #25d366 !important; color: #25d366 !important; }
+[data-theme="light"] .contact-icon-wa { color: #128c40 !important; border-color: rgba(18,140,64,.25) !important; }
+[data-theme="light"] .contact-icon-wa:hover { background: rgba(18,140,64,.10) !important; }
 
 /* ── Contact form ── */
 .contact-form-wrap {
@@ -791,8 +758,6 @@ a.project-card { text-decoration: none; cursor: pointer; }
 .form-toast.error   { background: rgba(248,113,113,.10); color: #f87171; border: 1px solid rgba(248,113,113,.2); }
 
 /* ── Light mode overrides ── */
-[data-theme="light"] .contact-channel { background: rgba(109,40,217,0.04); }
-[data-theme="light"] .channel-icon-wa { color: #128c40; background: rgba(18,140,64,.08); border-color: rgba(18,140,64,.2); }
 [data-theme="light"] .contact-form-wrap { background: rgba(109,40,217,0.04); }
 [data-theme="light"] .form-input { background: rgba(109,40,217,0.04); }
 
@@ -816,7 +781,7 @@ a.project-card { text-decoration: none; cursor: pointer; }
 ════════════════════════════════════════════════ */
 @media (max-width:900px) {
   .about-grid     { grid-template-columns:1fr; gap:3rem; }
-  .contact-layout { grid-template-columns:1fr; }
+  .contact-layout { grid-template-columns:1fr; gap:2rem; }
 }
 @media (max-width:768px) {
   body { cursor:auto; }

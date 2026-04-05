@@ -89,8 +89,8 @@ window.SITE_DATA = {
 
   experience: [
     {
-      role: "AI Engineer",
-      company: "Independent / Freelance",
+      role: "Senior AI Engineer",
+      company: "EXL Services",
       companyUrl: null,
       period: "2023 — Present",
       description: "Building AI-powered trading systems, asynchronous data pipelines, and full-stack web applications. Focus on production-grade architecture, broker API integrations, and multi-agent AI orchestration.",
@@ -100,8 +100,8 @@ window.SITE_DATA = {
 
   stats: [
     { value: "3+", label: "Years coding" },
-    { value: "10+", label: "Projects shipped" },
-    { value: "5+", label: "AI integrations" },
+    { value: "20+", label: "Projects shipped" },
+    { value: "10+", label: "AI integrations" },
     { value: "∞", label: "Cups of chai" },
   ],
 

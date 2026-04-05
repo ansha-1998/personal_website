@@ -6,12 +6,12 @@
   'use strict';
 
   const ICONS = {
-    github:   `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>`,
+    github: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>`,
     linkedin: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>`,
-    twitter:  `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`,
-    instagram:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>`,
-    globe:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>`,
-    arrow:    `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>`,
+    twitter: `<svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>`,
+    instagram: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>`,
+    globe: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>`,
+    arrow: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M7 17L17 7M17 7H7M17 7v10"/></svg>`,
   };
 
   function $id(id) { return document.getElementById(id); }
@@ -56,9 +56,9 @@
       nameEl.appendChild(line);
     }
 
-    const roleEl    = $id('hero-role-text');
+    const roleEl = $id('hero-role-text');
     const taglineEl = $id('hero-tagline');
-    if (roleEl)    roleEl.textContent    = profile.role;
+    if (roleEl) roleEl.textContent = profile.role;
     if (taglineEl) taglineEl.textContent = profile.tagline;
 
     const resumeBtn = $id('hero-cta-resume');
@@ -76,9 +76,9 @@
         `<p class="about-bio-p reveal-up" style="--delay:${0.15 + i * 0.1}s">${p}</p>`
       ).join('');
     }
-    const locEl   = $id('about-location');
+    const locEl = $id('about-location');
     const emailEl = $id('about-email');
-    if (locEl)   locEl.textContent = profile.location;
+    if (locEl) locEl.textContent = profile.location;
     if (emailEl) { emailEl.textContent = profile.email; emailEl.href = 'mailto:' + profile.email; }
 
     const socialsEl = $id('about-socials');
@@ -123,9 +123,9 @@
         <span class="skill-category-name">${cat}</span>
         <div class="skill-tags">
           ${tags.map(tag => {
-            const d = (tagIdx++ * 0.025).toFixed(3);
-            return `<span class="skill-tag" style="--tag-delay:${d}s">${tag}</span>`;
-          }).join('')}
+      const d = (tagIdx++ * 0.025).toFixed(3);
+      return `<span class="skill-tag" style="--tag-delay:${d}s">${tag}</span>`;
+    }).join('')}
         </div>
       </div>`).join('');
   }
@@ -140,8 +140,8 @@
         <div class="timeline-meta">
           <span class="timeline-role">${e.role}</span>
           ${e.companyUrl
-            ? `<a href="${e.companyUrl}" target="_blank" rel="noopener" class="timeline-company">${e.company}</a>`
-            : `<span class="timeline-company">${e.company}</span>`}
+        ? `<a href="${e.companyUrl}" target="_blank" rel="noopener" class="timeline-company">${e.company}</a>`
+        : `<span class="timeline-company">${e.company}</span>`}
           <span class="timeline-period">${e.period}</span>
         </div>
         <p class="timeline-description">${e.description}</p>
@@ -182,16 +182,19 @@
   //  2. Click ⋮ → "Get pre-filled link" to reveal entry IDs
   //  3. Replace the GOOGLE_FORM_URL and ENTRY_* constants below
   //  4. The form submits silently (no-cors) — data goes straight to your sheet
+  https://docs.google.com/forms/d/e/1FAIpQLSdGXKu34QCB_9hPeIDNRg5v9KWzegrGeoYRHXDXhPQ5dJdKQw/viewform?usp=pp_url&entry.1430851278=Ansha&entry.1643065738=anshamohammed14@gmail.com&entry.1722332998=9947363114&entry.2031443530=Hi
+
+
   //
-  var GOOGLE_FORM_URL  = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
-  var ENTRY_NAME       = 'entry.000000001';  // ← replace with your entry ID
-  var ENTRY_EMAIL      = 'entry.000000002';
-  var ENTRY_PHONE      = 'entry.000000003';
-  var ENTRY_MESSAGE    = 'entry.000000004';
+  var GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdGXKu34QCB_9hPeIDNRg5v9KWzegrGeoYRHXDXhPQ5dJdKQw/viewform?usp=publish-editor';
+  var ENTRY_NAME = 'entry.1430851278';  // ← replace with your entry ID
+  var ENTRY_EMAIL = 'entry.1643065738';
+  var ENTRY_PHONE = 'entry.1722332998';
+  var ENTRY_MESSAGE = 'entry.2031443530';
 
   function initContactForm() {
-    var form   = $id('contact-form');
-    var toast  = $id('form-toast');
+    var form = $id('contact-form');
+    var toast = $id('form-toast');
     var submit = $id('form-submit');
     if (!form) return;
 
@@ -231,10 +234,10 @@
       submit.disabled = true;
 
       var params = new URLSearchParams();
-      params.append(ENTRY_NAME,    ($id('cf-name')  || {}).value || '');
-      params.append(ENTRY_EMAIL,   ($id('cf-email') || {}).value || '');
-      params.append(ENTRY_PHONE,   ($id('cf-phone') || {}).value || '');
-      params.append(ENTRY_MESSAGE, ($id('cf-msg')   || {}).value || '');
+      params.append(ENTRY_NAME, ($id('cf-name') || {}).value || '');
+      params.append(ENTRY_EMAIL, ($id('cf-email') || {}).value || '');
+      params.append(ENTRY_PHONE, ($id('cf-phone') || {}).value || '');
+      params.append(ENTRY_MESSAGE, ($id('cf-msg') || {}).value || '');
 
       // Submit silently — Google Forms ignores CORS; no-cors always resolves
       fetch(GOOGLE_FORM_URL, {
@@ -243,17 +246,17 @@
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: params.toString(),
       })
-      .then(function () {
-        showToast('Message sent! I\'ll get back to you soon.', 'success');
-        form.reset();
-      })
-      .catch(function () {
-        // In no-cors mode, network errors still surface; show success anyway
-        // because Google Forms likely received the data
-        showToast('Message sent! I\'ll get back to you soon.', 'success');
-        form.reset();
-      })
-      .finally(function () { submit.disabled = false; });
+        .then(function () {
+          showToast('Message sent! I\'ll get back to you soon.', 'success');
+          form.reset();
+        })
+        .catch(function () {
+          // In no-cors mode, network errors still surface; show success anyway
+          // because Google Forms likely received the data
+          showToast('Message sent! I\'ll get back to you soon.', 'success');
+          form.reset();
+        })
+        .finally(function () { submit.disabled = false; });
     });
   }
 
@@ -267,7 +270,7 @@
 
   // ── Alien Cursor — large slow-moving specter ──────────────────────────────
   function initCursor() {
-    const dot     = $id('cursor-dot');
+    const dot = $id('cursor-dot');
     const specter = $id('cursor-ring');
     if (!dot || !specter) return;
 
@@ -284,7 +287,7 @@
       sx += (dx - sx) * 0.038;
       sy += (dy - sy) * 0.038;
       specter.style.left = sx + 'px';
-      specter.style.top  = sy + 'px';
+      specter.style.top = sy + 'px';
       requestAnimationFrame(loop);
     })();
 
@@ -338,7 +341,7 @@
         for (let j = i + 1; j < particles.length; j++) {
           const dx = particles[i].x - particles[j].x;
           const dy = particles[i].y - particles[j].y;
-          const d  = Math.sqrt(dx * dx + dy * dy);
+          const d = Math.sqrt(dx * dx + dy * dy);
           if (d < 80) {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
@@ -373,7 +376,7 @@
     }, { passive: true });
 
     const hamburger = $id('nav-hamburger');
-    const mobile    = $id('nav-mobile');
+    const mobile = $id('nav-mobile');
     if (hamburger && mobile) {
       hamburger.addEventListener('click', () => {
         hamburger.classList.toggle('active');
@@ -391,7 +394,7 @@
   // ── Scroll-reveal ─────────────────────────────────────────────────────────
   function initScrollReveal() {
     const els = document.querySelectorAll('.reveal-up');
-    const io  = new IntersectionObserver(function (entries) {
+    const io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
         if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); }
       });
@@ -403,12 +406,12 @@
   function initCardTilt() {
     document.querySelectorAll('.project-card').forEach(card => {
       card.addEventListener('mousemove', e => {
-        const r  = card.getBoundingClientRect();
-        const rx = -((e.clientY - r.top  - r.height / 2) / r.height) * 8;
-        const ry =  ((e.clientX - r.left - r.width  / 2) / r.width)  * 8;
+        const r = card.getBoundingClientRect();
+        const rx = -((e.clientY - r.top - r.height / 2) / r.height) * 8;
+        const ry = ((e.clientX - r.left - r.width / 2) / r.width) * 8;
         card.style.transform = 'perspective(900px) rotateX(' + rx + 'deg) rotateY(' + ry + 'deg) scale3d(1.015,1.015,1.015)';
-        card.style.setProperty('--mx', ((e.clientX - r.left) / r.width  * 100) + '%');
-        card.style.setProperty('--my', ((e.clientY - r.top)  / r.height * 100) + '%');
+        card.style.setProperty('--mx', ((e.clientX - r.left) / r.width * 100) + '%');
+        card.style.setProperty('--my', ((e.clientY - r.top) / r.height * 100) + '%');
       });
       card.addEventListener('mouseleave', () => { card.style.transform = ''; });
     });
@@ -464,7 +467,7 @@
   function initInfinityLoop() {
     var track = document.getElementById('inf-track');
     var arrow = document.getElementById('inf-arrow');
-    var segs  = Array.from(document.querySelectorAll('.hero-infinity-seg'));
+    var segs = Array.from(document.querySelectorAll('.hero-infinity-seg'));
     if (!track || !arrow || !segs.length) return;
 
     var total = track.getTotalLength();
@@ -472,7 +475,7 @@
 
     // Measure each segment and compute cumulative start fractions
     var segLengths = segs.map(function (s) { return s.getTotalLength(); });
-    var cumStarts  = [];
+    var cumStarts = [];
     var cum = 0;
     segLengths.forEach(function (len) {
       cumStarts.push(cum / total);
@@ -482,12 +485,12 @@
     // Initialise each segment hidden
     segs.forEach(function (seg, i) {
       var len = segLengths[i];
-      seg.style.strokeDasharray  = len + ' ' + len;
+      seg.style.strokeDasharray = len + ' ' + len;
       seg.style.strokeDashoffset = len;
     });
 
-    var DRAW_MS  = 45000;   // 45 s to trace the full path
-    var FADE_MS  = 5000;    // 5 s to fade out before restarting
+    var DRAW_MS = 45000;   // 45 s to trace the full path
+    var FADE_MS = 5000;    // 5 s to fade out before restarting
     var CYCLE_MS = DRAW_MS + FADE_MS;
     var startTime = null;
 
@@ -497,14 +500,14 @@
 
       if (elapsed < DRAW_MS) {
         // ── Draw phase ──────────────────────────────────────────────────────
-        var t    = elapsed / DRAW_MS;   // 0 → 1
+        var t = elapsed / DRAW_MS;   // 0 → 1
         var dist = total * t;
 
         // Arrow: position + orientation from path tangent
-        var ptA   = track.getPointAtLength(Math.max(0, dist - 1));
-        var ptB   = track.getPointAtLength(Math.min(dist + 1, total));
+        var ptA = track.getPointAtLength(Math.max(0, dist - 1));
+        var ptB = track.getPointAtLength(Math.min(dist + 1, total));
         var angle = Math.atan2(ptB.y - ptA.y, ptB.x - ptA.x) * 180 / Math.PI;
-        var pt    = track.getPointAtLength(dist);
+        var pt = track.getPointAtLength(dist);
         arrow.setAttribute('transform',
           'translate(' + pt.x + ',' + pt.y + ') rotate(' + angle + ')');
         arrow.style.opacity = elapsed < 500 ? elapsed / 500 : 1;
@@ -512,8 +515,8 @@
         // Each segment: hidden until arrow reaches it, then draws behind the arrow
         segs.forEach(function (seg, i) {
           var segStart = cumStarts[i];
-          var segEnd   = (i + 1 < cumStarts.length) ? cumStarts[i + 1] : 1;
-          var segLen   = segLengths[i];
+          var segEnd = (i + 1 < cumStarts.length) ? cumStarts[i + 1] : 1;
+          var segLen = segLengths[i];
 
           if (t <= segStart) {
             // Arrow hasn't reached this segment yet — keep hidden
@@ -542,8 +545,8 @@
         arrow.style.opacity = ft < 0.5 ? 1 - ft * 2 : 0;  // arrow fades first
 
         // Keep arrow parked at the end point
-        var ep1    = track.getPointAtLength(total - 2);
-        var ep2    = track.getPointAtLength(total);
+        var ep1 = track.getPointAtLength(total - 2);
+        var ep2 = track.getPointAtLength(total);
         var eAngle = Math.atan2(ep2.y - ep1.y, ep2.x - ep1.x) * 180 / Math.PI;
         arrow.setAttribute('transform',
           'translate(' + ep2.x + ',' + ep2.y + ') rotate(' + eAngle + ')');
